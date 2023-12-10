@@ -17,10 +17,13 @@ function printDots(num) {
   }
 }
 printDots(sliderImges.length);
+
 // change image by clicking dots
-dots.forEach((value, ind) => {
+
+[...dotWrapper.children].forEach((value, ind) => {
   value.addEventListener("click", function (event) {
     changeImg(ind);
+    activeDots(ind);
   });
 });
 
